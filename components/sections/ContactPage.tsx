@@ -37,7 +37,7 @@ export default function ContactPageContent() {
             <ul className="grid gap-3">
               <li>
                 <a
-                  href="mailto:rihamha1920@icloud.com"
+                  href="mailto:rihamha1920@gmail.com"
                   className="flex items-center gap-3 rounded-xl border border-border bg-surface-2 px-4 py-3 text-[0.9rem] font-semibold text-text transition-colors hover:border-cherry/40 hover:text-cherry-light"
                 >
                   <svg viewBox="0 0 24 24" width="18" height="18" className="shrink-0">
@@ -46,7 +46,7 @@ export default function ContactPageContent() {
                       d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.06 5.6a1.2 1.2 0 0 0 1.48 0l7.06-5.6a.6.6 0 0 0-.3-1.05H4.5a.6.6 0 0 0-.3 1.05Z"
                     />
                   </svg>
-                  rihamha1920@icloud.com
+                  rihamha1920@gmail.com
                 </a>
               </li>
               <li>

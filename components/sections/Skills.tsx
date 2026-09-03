@@ -5,27 +5,29 @@ const SKILL_GROUPS = [
     icon: "🖥️",
     title: "Frontend",
     blurb: "Building fast, accessible interfaces that feel good to use.",
-    chips: ["JavaScript", "TypeScript", "React", "Next.js", "HTML5", "CSS3"],
+    chips: ["JavaScript", "TypeScript", "React.js", "Next.js", "HTML5", "CSS3"],
   },
   {
     icon: "🎬",
     title: "Animation & UI",
     blurb: "The details that make a static page feel alive.",
-    chips: ["Framer Motion", "Tailwind CSS", "Responsive Design", "UI/UX"],
+    chips: ["Framer Motion", "Tailwind CSS", "Responsive Design", "UI/UX Design"],
+  },
+  {
+    icon: "⚙️",
+    title: "Backend & Data",
+    blurb: "APIs, auth, and the data layer that powers the interface.",
+    chips: ["Node.js", "Express.js", "REST APIs", "MySQL", "MongoDB"],
   },
   {
     icon: "📱",
-    title: "Mobile & Backend",
-    blurb: "Data, auth, and the logic that powers the interface.",
-    chips: ["Flutter", "Firebase", "Node.js", "C++"],
-  },
-  {
-    icon: "🛠️",
-    title: "Tools",
-    blurb: "What keeps projects organized from first commit to deploy.",
-    chips: ["Git & GitHub", "VS Code", "Figma", "Vercel"],
+    title: "Mobile",
+    blurb: "Cross-platform apps with a native feel.",
+    chips: ["Flutter", "Dart", "Firebase"],
   },
 ];
+
+const PROCESS_TOOLS = ["Git & GitHub", "Agile / Scrum", "Vercel", "Full SDLC"];
 
 const CURRENTLY_LEARNING = ["Next.js App Router", "Server Components", "Cloud deployment", "Accessibility (a11y)"];
 
@@ -70,7 +72,24 @@ export default function Skills() {
       </div>
 
       <Reveal delay={0.1}>
-        <div className="mt-14 rounded-[20px] border border-border bg-surface p-8">
+        <div className="mt-10 rounded-[20px] border border-border bg-surface p-8">
+          <h2 className="font-display mb-1.5 text-xl text-text">Process &amp; tools</h2>
+          <p className="mb-4 text-[0.94rem] text-text-soft">How I keep a project organized from first commit to deploy.</p>
+          <div className="flex flex-wrap gap-2">
+            {PROCESS_TOOLS.map((item) => (
+              <span
+                key={item}
+                className="rounded-full bg-surface-2 px-3 py-1.5 text-[0.78rem] font-bold text-text-soft transition-all hover:-translate-y-0.5 hover:bg-cherry hover:text-white"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mt-8 rounded-[20px] border border-border bg-surface p-8">
           <h2 className="font-display mb-1.5 text-xl text-text">Currently learning</h2>
           <p className="mb-4 text-[0.94rem] text-text-soft">
             What I&apos;m actively digging into right now — this portfolio was

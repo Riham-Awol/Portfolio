@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: "About", href: "/about" },
   { label: "Skills", href: "/skills" },
   { label: "Projects", href: "/projects" },
+  { label: "Resume", href: "/resume" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -39,7 +40,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="mailto:rihamha1920@icloud.com"
+              href="mailto:rihamha1920@gmail.com"
               aria-label="Email"
               className="grid h-9 w-9 place-items-center rounded-full border border-border bg-surface-2 text-text transition-all hover:-translate-y-0.5 hover:bg-cherry hover:text-white"
             >
@@ -83,8 +84,8 @@ export default function Footer() {
           <h4 className="mb-4 font-display text-base text-text">Contact</h4>
           <ul className="space-y-2.5">
             <li>
-              <a href="mailto:rihamha1920@icloud.com" className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light">
-                rihamha1920@icloud.com
+              <a href="mailto:rihamha1920@gmail.com" className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light">
+                rihamha1920@gmail.com
               </a>
             </li>
             <li>

@@ -21,10 +21,10 @@ export default function Contact() {
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:rihamha1920@icloud.com"
+                href="mailto:rihamha1920@gmail.com"
                 className="rounded-full bg-white px-[26px] py-3.5 font-bold text-cherry-dark shadow-md transition-transform hover:-translate-y-0.5"
               >
-                rihamha1920@icloud.com
+                rihamha1920@gmail.com
               </a>
               <a
                 href="https://github.com/Riham-Awol"

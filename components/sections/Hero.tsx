@@ -62,7 +62,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="mailto:rihamha1920@icloud.com"
+              href="mailto:rihamha1920@gmail.com"
               aria-label="Email"
               className="grid h-[42px] w-[42px] place-items-center rounded-full border border-border bg-surface text-text transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-cherry hover:text-white"
             >

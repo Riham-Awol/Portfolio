@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const ROLES = ["Full-Stack Developer", "Computer Science Student", "Frontend & Backend Engineer", "Problem Solver"];
+const ROLES = ["Full-Stack Developer", "Web & Mobile Developer", "Computer Science Student", "Problem Solver"];
 
 export default function TypedRole() {
   const [text, setText] = useState("");

@@ -3,13 +3,15 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const CONTACT_EMAIL = "rihamha1920@icloud.com";
+const CONTACT_EMAIL = "rihamha1920@gmail.com";
+
+type Status = "idle" | "sending" | "sent" | "fallback";
 
 export default function FloatingChat() {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,13 +31,28 @@ export default function FloatingChat() {
     };
   }, [open]);
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    if (!message.trim()) return;
+  function openMailtoFallback() {
     const subject = encodeURIComponent("Quick chat message from your portfolio");
     const body = encodeURIComponent(`${message}${email ? `\n\n— reply to: ${email}` : ""}`);
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("fallback");
+  }
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!message.trim()) return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, message, source: "chat" }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setStatus("sent");
+    } catch {
+      openMailtoFallback();
+    }
   }
 
   return (
@@ -62,9 +79,9 @@ export default function FloatingChat() {
             </div>
 
             <div className="p-5">
-              {sent ? (
+              {status === "sent" ? (
                 <p className="text-[0.92rem] leading-relaxed text-text-soft">
-                  Your email app should now be open with the message ready — hit send there and I&apos;ll reply soon. 👋
+                  Message sent — it landed straight in my inbox. I&apos;ll reply soon. 👋
                 </p>
               ) : (
                 <form onSubmit={handleSubmit} className="grid gap-3">
@@ -88,10 +105,14 @@ export default function FloatingChat() {
                   />
                   <button
                     type="submit"
-                    className="rounded-full bg-gradient-to-br from-cherry to-navy px-4 py-2.5 text-[0.88rem] font-bold text-white transition-transform hover:-translate-y-0.5"
+                    disabled={status === "sending"}
+                    className="rounded-full bg-gradient-to-br from-cherry to-navy px-4 py-2.5 text-[0.88rem] font-bold text-white transition-transform hover:-translate-y-0.5 disabled:opacity-60"
                   >
-                    Send message
+                    {status === "sending" ? "Sending…" : "Send message"}
                   </button>
+                  {status === "fallback" && (
+                    <p className="text-[0.78rem] text-text-soft">Opened your email app instead — hit send there.</p>
+                  )}
                 </form>
               )}
 

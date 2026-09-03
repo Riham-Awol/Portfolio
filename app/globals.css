@@ -1,47 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --sage: #8ea683;
-  --sage-dark: #64795a;
-  --sage-light: #c9d6bd;
-  --brown: #8a6a4f;
-  --brown-dark: #5f4632;
-  --beige: #f4ecdf;
-  --cream: #fbf7ef;
-  --ink: #3a342c;
-  --ink-soft: #6b6259;
-  --line: #e4d9c6;
+  --bg: #0a0e1a;
+  --surface: #121729;
+  --surface-2: #1a2138;
+  --border: #262f4a;
+  --text: #eef0f5;
+  --text-soft: #8d96b2;
+
+  --cherry: #e31c4f;
+  --cherry-dark: #9e1238;
+  --cherry-light: #ff6b8f;
+
+  --navy: #2545a0;
+  --navy-dark: #142860;
+  --navy-light: #4a6fd4;
 }
 
 @theme inline {
-  --color-sage: var(--sage);
-  --color-sage-dark: var(--sage-dark);
-  --color-sage-light: var(--sage-light);
-  --color-brown: var(--brown);
-  --color-brown-dark: var(--brown-dark);
-  --color-beige: var(--beige);
-  --color-cream: var(--cream);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-line: var(--line);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-soft: var(--text-soft);
+
+  --color-cherry: var(--cherry);
+  --color-cherry-dark: var(--cherry-dark);
+  --color-cherry-light: var(--cherry-light);
+
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-light: var(--navy-light);
 
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-manrope);
 }
 
 body {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--text);
   background-image: radial-gradient(
       circle at 15% 8%,
-      rgb(142 166 131 / 10%),
+      rgb(227 28 79 / 12%),
       transparent 40%
-    ), radial-gradient(circle at 85% 15%, rgb(138 106 79 / 8%), transparent 45%);
+    ), radial-gradient(circle at 85% 15%, rgb(37 69 160 / 18%), transparent 45%);
 }
 
 ::selection {
-  background: var(--sage-light);
-  color: var(--brown-dark);
+  background: var(--cherry);
+  color: var(--text);
 }
 
 @keyframes float {
@@ -85,13 +93,13 @@ body {
 
 @keyframes pulse-dot {
   0% {
-    box-shadow: 0 0 0 0 rgb(100 121 90 / 50%);
+    box-shadow: 0 0 0 0 rgb(74 111 212 / 55%);
   }
   70% {
-    box-shadow: 0 0 0 7px rgb(100 121 90 / 0%);
+    box-shadow: 0 0 0 7px rgb(74 111 212 / 0%);
   }
   100% {
-    box-shadow: 0 0 0 0 rgb(100 121 90 / 0%);
+    box-shadow: 0 0 0 0 rgb(74 111 212 / 0%);
   }
 }
 

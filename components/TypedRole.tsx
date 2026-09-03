@@ -41,7 +41,7 @@ export default function TypedRole() {
   return (
     <>
       {text}
-      <span className="animate-blink text-brown">|</span>
+      <span className="animate-blink text-cherry">|</span>
     </>
   );
 }

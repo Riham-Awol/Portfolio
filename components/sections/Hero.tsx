@@ -5,23 +5,23 @@ import PhotoFrame from "@/components/PhotoFrame";
 
 export default function Hero() {
   return (
-    <section id="home" className="mx-auto grid min-h-[88vh] max-w-[1160px] grid-cols-1 items-center gap-12 px-6 py-24 pt-[130px] md:grid-cols-[1.15fr_0.85fr] md:pt-24">
+    <section className="mx-auto grid min-h-[85vh] max-w-[1160px] grid-cols-1 items-center gap-12 px-6 py-24 pt-[130px] md:grid-cols-[1.15fr_0.85fr] md:pt-24">
       <div className="order-2 text-center md:order-1 md:text-left">
         <Reveal>
-          <p className="mb-2 font-semibold text-sage-dark">Hello, I&apos;m</p>
+          <p className="mb-2 font-semibold text-cherry-light">Hello, I&apos;m</p>
         </Reveal>
         <Reveal delay={0.05}>
-          <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-[1.05] font-bold text-brown-dark">
+          <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-[1.05] font-bold text-text">
             Riham Awol
           </h1>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="font-display mt-2.5 mb-[22px] min-h-[1.6em] text-[clamp(1.3rem,2.6vw,1.9rem)] font-medium text-sage-dark italic">
+          <h2 className="font-display mt-2.5 mb-[22px] min-h-[1.6em] text-[clamp(1.3rem,2.6vw,1.9rem)] font-medium text-navy-light italic">
             <TypedRole />
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="mx-auto mb-[34px] max-w-[540px] text-[1.06rem] leading-[1.75] text-ink-soft md:mx-0">
+          <p className="mx-auto mb-[34px] max-w-[540px] text-[1.06rem] leading-[1.75] text-text-soft md:mx-0">
             A Full-Stack Developer and Computer Science student who turns real
             problems into clean, reliable web applications — from e-commerce
             platforms and payment systems to HR tools and management
@@ -32,14 +32,14 @@ export default function Hero() {
         <Reveal delay={0.2}>
           <div className="mb-[30px] flex flex-wrap justify-center gap-4 md:justify-start">
             <Link
-              href="/#projects"
-              className="rounded-full bg-gradient-to-br from-sage-dark to-brown px-[26px] py-3.5 font-bold text-white shadow-md transition-transform hover:-translate-y-0.5"
+              href="/projects"
+              className="rounded-full bg-gradient-to-br from-cherry to-navy px-[26px] py-3.5 font-bold text-white shadow-[0_8px_24px_-10px_rgb(227_28_79_/_55%)] transition-transform hover:-translate-y-0.5"
             >
               View my work
             </Link>
             <Link
-              href="/#contact"
-              className="rounded-full border-2 border-line px-[26px] py-3.5 font-bold text-brown-dark transition-all hover:-translate-y-0.5 hover:border-sage hover:bg-sage/10"
+              href="/contact"
+              className="rounded-full border-2 border-border px-[26px] py-3.5 font-bold text-text transition-all hover:-translate-y-0.5 hover:border-cherry hover:bg-cherry/10"
             >
               Get in touch
             </Link>
@@ -52,7 +52,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-line bg-white text-brown-dark transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-sage-dark hover:text-white"
+              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-border bg-surface text-text transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-cherry hover:text-white"
             >
               <svg viewBox="0 0 24 24" width="20" height="20">
                 <path
@@ -64,7 +64,7 @@ export default function Hero() {
             <a
               href="mailto:rihamha1920@icloud.com"
               aria-label="Email"
-              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-line bg-white text-brown-dark transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-sage-dark hover:text-white"
+              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-border bg-surface text-text transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-cherry hover:text-white"
             >
               <svg viewBox="0 0 24 24" width="20" height="20">
                 <path
@@ -78,7 +78,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Website"
-              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-line bg-white text-brown-dark transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-sage-dark hover:text-white"
+              className="grid h-[42px] w-[42px] place-items-center rounded-full border border-border bg-surface text-text transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-cherry hover:text-white"
             >
               <svg viewBox="0 0 24 24" width="20" height="20">
                 <path

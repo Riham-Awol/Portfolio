@@ -2,11 +2,11 @@ import Link from "next/link";
 import { projects } from "@/lib/projects";
 
 const NAV_ITEMS = [
-  { id: "home", label: "Home", href: "/" },
-  { id: "about", label: "About", href: "/#about" },
-  { id: "skills", label: "Skills", href: "/#skills" },
-  { id: "projects", label: "Projects", href: "/#projects" },
-  { id: "contact", label: "Contact", href: "/#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Skills", href: "/skills" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -14,13 +14,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 border-t border-line bg-beige px-6 pt-16">
+    <footer className="mt-16 border-t border-border bg-surface px-6 pt-16">
       <div className="mx-auto grid max-w-[1160px] grid-cols-1 gap-10 pb-12 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-10">
         <div>
-          <Link href="/" className="font-display text-2xl font-bold text-brown-dark">
-            Riham<span className="text-sage">.</span>
+          <Link href="/" className="font-display text-2xl font-bold text-text">
+            Riham<span className="text-cherry">.</span>
           </Link>
-          <p className="mt-3.5 mb-[18px] max-w-[320px] text-[0.92rem] leading-relaxed text-ink-soft">
+          <p className="mt-3.5 mb-[18px] max-w-[320px] text-[0.92rem] leading-relaxed text-text-soft">
             Full-Stack Developer building clean, reliable, well-designed web applications.
           </p>
           <div className="flex gap-2.5">
@@ -29,7 +29,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brown-dark transition-all hover:-translate-y-0.5 hover:bg-sage-dark hover:text-white"
+              className="grid h-9 w-9 place-items-center rounded-full border border-border bg-surface-2 text-text transition-all hover:-translate-y-0.5 hover:bg-cherry hover:text-white"
             >
               <svg viewBox="0 0 24 24" width="18" height="18">
                 <path
@@ -41,7 +41,7 @@ export default function Footer() {
             <a
               href="mailto:rihamha1920@icloud.com"
               aria-label="Email"
-              className="grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brown-dark transition-all hover:-translate-y-0.5 hover:bg-sage-dark hover:text-white"
+              className="grid h-9 w-9 place-items-center rounded-full border border-border bg-surface-2 text-text transition-all hover:-translate-y-0.5 hover:bg-cherry hover:text-white"
             >
               <svg viewBox="0 0 24 24" width="18" height="18">
                 <path
@@ -54,11 +54,11 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-4 font-display text-base text-brown-dark">Navigation</h4>
+          <h4 className="mb-4 font-display text-base text-text">Navigation</h4>
           <ul className="space-y-2.5">
             {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
-                <Link href={item.href} className="text-[0.92rem] text-ink-soft transition-colors hover:text-sage-dark">
+              <li key={item.href}>
+                <Link href={item.href} className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light">
                   {item.label}
                 </Link>
               </li>
@@ -67,11 +67,11 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-4 font-display text-base text-brown-dark">Selected Projects</h4>
+          <h4 className="mb-4 font-display text-base text-text">Selected Projects</h4>
           <ul className="space-y-2.5">
             {featured.map((p) => (
               <li key={p.slug}>
-                <Link href={`/projects/${p.slug}`} className="text-[0.92rem] text-ink-soft transition-colors hover:text-sage-dark">
+                <Link href={`/projects/${p.slug}`} className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light">
                   {p.name}
                 </Link>
               </li>
@@ -80,10 +80,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-4 font-display text-base text-brown-dark">Contact</h4>
+          <h4 className="mb-4 font-display text-base text-text">Contact</h4>
           <ul className="space-y-2.5">
             <li>
-              <a href="mailto:rihamha1920@icloud.com" className="text-[0.92rem] text-ink-soft transition-colors hover:text-sage-dark">
+              <a href="mailto:rihamha1920@icloud.com" className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light">
                 rihamha1920@icloud.com
               </a>
             </li>
@@ -92,7 +92,7 @@ export default function Footer() {
                 href="https://github.com/Riham-Awol"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[0.92rem] text-ink-soft transition-colors hover:text-sage-dark"
+                className="text-[0.92rem] text-text-soft transition-colors hover:text-cherry-light"
               >
                 github.com/Riham-Awol
               </a>
@@ -101,9 +101,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-line py-[22px] text-[0.85rem] text-ink-soft">
+      <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-3 border-t border-border py-[22px] text-[0.85rem] text-text-soft">
         <span>© {year} Riham Awol. All rights reserved.</span>
-        <Link href="/" className="font-bold text-sage-dark hover:text-brown-dark">
+        <Link href="/" className="font-bold text-cherry-light hover:text-cherry">
           Back to top ↑
         </Link>
       </div>

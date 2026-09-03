@@ -81,7 +81,7 @@ export default function FloatingChat() {
             <div className="p-5">
               {status === "sent" ? (
                 <p className="text-[0.92rem] leading-relaxed text-text-soft">
-                  Message sent — it landed straight in my inbox. I&apos;ll reply soon. 👋
+                  Message sent — I&apos;ll see it soon and reply. 👋
                 </p>
               ) : (
                 <form onSubmit={handleSubmit} className="grid gap-3">

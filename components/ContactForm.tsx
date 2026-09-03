@@ -121,7 +121,7 @@ export default function ContactForm() {
       <p className="text-[0.82rem] text-text-soft">
         {status === "fallback"
           ? "Couldn't send directly, so I opened your email app instead with everything pre-filled — hit send there."
-          : "Sends straight to my inbox — I'll get back to you as soon as I can."}
+          : "I'll see it as soon as you send it — and get back to you as soon as I can."}
       </p>
     </form>
   );

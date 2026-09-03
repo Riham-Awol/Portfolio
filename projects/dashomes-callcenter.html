@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project — Riham Awol</title>
+<meta name="description" content="Project details — Riham Awol, Full-Stack Developer." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
+<meta name="theme-color" content="#fbf7ef" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="project" data-slug="dashomes-callcenter">
+
+<div class="blob blob-a" aria-hidden="true"></div>
+<div class="blob blob-b" aria-hidden="true"></div>
+<div class="blob blob-c" aria-hidden="true"></div>
+
+<header class="nav-wrap" id="siteHeader" data-base="../"></header>
+
+<main>
+  <section class="section container" style="padding-top:56px;">
+    <a href="../index.html#projects" class="breadcrumb reveal">← All projects</a>
+
+    <div class="project-detail-hero reveal">
+      <div class="project-detail-icon" id="projIcon"></div>
+      <div class="project-detail-heading">
+        <h1 id="projName"></h1>
+        <p id="projTagline"></p>
+      </div>
+    </div>
+
+    <div class="project-detail-actions reveal">
+      <a href="#" id="projGithub" target="_blank" rel="noopener" class="btn btn-primary">View source on GitHub ↗</a>
+      <a href="../index.html#contact" class="btn btn-ghost">Discuss this project</a>
+    </div>
+
+    <div class="project-mockup reveal">
+      <div class="mockup-icon" id="projMockupIcon"></div>
+    </div>
+
+    <div class="project-detail-grid">
+      <div class="project-detail-body reveal">
+        <h2>Overview</h2>
+        <p id="projDescription"></p>
+
+        <h2>Key features</h2>
+        <ul class="feature-list" id="projFeatures"></ul>
+      </div>
+
+      <aside class="project-sidebar reveal">
+        <h3>Built with</h3>
+        <div class="chip-row" id="projTech"></div>
+      </aside>
+    </div>
+
+    <nav class="proj-nav reveal">
+      <a href="#" id="projPrev" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-label">← Previous</span>
+        <span class="proj-nav-name"></span>
+      </a>
+      <a href="#" id="projNext" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-label">Next →</span>
+        <span class="proj-nav-name"></span>
+      </a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter" data-base="../"></footer>
+
+<script src="../js/projects-data.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/project-page.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const p = window.PROJECTS.find((x) => x.slug === document.body.dataset.slug);
+    if (p) document.getElementById("projMockupIcon").textContent = p.icon;
+  });
+</script>
+</body>
+</html>

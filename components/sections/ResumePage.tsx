@@ -1,4 +1,6 @@
 import Reveal from "@/components/Reveal";
+import ResumeViewToggle from "@/components/ResumeViewToggle";
+import TerminalDisplay from "@/components/TerminalDisplay";
 
 const DOCUMENTS = [
   {
@@ -33,6 +35,33 @@ export default function ResumePage() {
         </p>
       </Reveal>
 
+      <Reveal delay={0.1}>
+        <h2 className="font-display mb-6 text-2xl text-text">Interactive resume</h2>
+      </Reveal>
+      <Reveal delay={0.15}>
+        <ResumeViewToggle />
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mt-10 mb-14 flex justify-center">
+          <TerminalDisplay
+            command="cat experience.json"
+            title="riham@resume: ~"
+            output={[
+              "{",
+              '  "role": "Full-Stack Web & Mobile Developer",',
+              '  "skills": ["React.js", "Node.js", "JavaScript", "Flutter/Dart", "MongoDB", "Firebase"],',
+              '  "location": "Addis Ababa, Ethiopia",',
+              '  "status": "open_to_opportunities"',
+              "}",
+            ]}
+          />
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <h2 className="font-display mb-6 text-2xl text-text">Documents</h2>
+      </Reveal>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {DOCUMENTS.map((doc, i) => (
           <Reveal key={doc.title} delay={i * 0.06}>

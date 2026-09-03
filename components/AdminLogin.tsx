@@ -55,7 +55,7 @@ export default function AdminLogin({ configured }: { configured: boolean }) {
           <button
             type="submit"
             disabled={loading}
-            className="justify-self-start rounded-full bg-gradient-to-br from-cherry to-navy px-6 py-3 font-bold text-white shadow-[0_8px_24px_-10px_rgb(227_28_79_/_55%)] transition-transform hover:-translate-y-0.5 disabled:opacity-60"
+            className="justify-self-start rounded-full bg-gradient-to-br from-cherry to-navy px-6 py-3 font-bold text-white shadow-[0_8px_24px_-10px_rgb(232_93_158_/_55%)] transition-transform hover:-translate-y-0.5 disabled:opacity-60"
           >
             {loading ? "Signing in…" : "Sign in"}
           </button>

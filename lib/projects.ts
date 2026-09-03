@@ -192,3 +192,8 @@ export function getAdjacentProjects(slug: string): { prev: Project; next: Projec
   const next = projects[(index + 1) % projects.length];
   return { prev, next };
 }
+
+export function getProjectsByTech(techName: string): Project[] {
+  const needle = techName.toLowerCase();
+  return projects.filter((p) => p.tech.some((t) => t.toLowerCase().includes(needle)));
+}

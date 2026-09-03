@@ -94,7 +94,7 @@ export default function Header() {
 
         <Link
           href="/contact"
-          className="hidden shrink-0 rounded-full bg-gradient-to-br from-cherry to-navy px-5 py-2.5 text-[0.88rem] font-bold text-white shadow-[0_8px_20px_-8px_rgb(227_28_79_/_50%)] transition-transform hover:-translate-y-0.5 md:inline-flex"
+          className="hidden shrink-0 rounded-full bg-gradient-to-br from-cherry to-navy px-5 py-2.5 text-[0.88rem] font-bold text-white shadow-[0_8px_20px_-8px_rgb(232_93_158_/_50%)] transition-transform hover:-translate-y-0.5 md:inline-flex"
         >
           Let&apos;s talk
         </Link>

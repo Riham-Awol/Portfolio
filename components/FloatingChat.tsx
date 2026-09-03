@@ -155,7 +155,7 @@ export default function FloatingChat() {
         aria-label={open ? "Close chat" : "Chat with me"}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.96 }}
-        className="grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-cherry to-navy text-white shadow-[0_10px_30px_-8px_rgb(227_28_79_/_60%)]"
+        className="grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-cherry to-navy text-white shadow-[0_10px_30px_-8px_rgb(232_93_158_/_60%)]"
       >
         {!open && (
           <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-cherry/40" aria-hidden="true" />

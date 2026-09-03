@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import TerminalDisplay from "@/components/TerminalDisplay";
 
 export default function ContactPageContent() {
   return (
@@ -88,6 +89,12 @@ export default function ContactPageContent() {
               I typically reply within a day or two. For anything urgent, email is fastest.
             </p>
           </div>
+
+          <TerminalDisplay
+            command="connect Riham"
+            title="riham@contact: ~"
+            output={["✓ Email", "✓ Phone", "✓ GitHub", "✓ Location — Addis Ababa, Ethiopia"]}
+          />
         </Reveal>
       </div>
     </section>

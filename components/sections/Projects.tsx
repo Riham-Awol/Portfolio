@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectFilters from "@/components/ProjectFilters";
 import { projects } from "@/lib/projects";
 
 export default function Projects() {
@@ -19,13 +19,9 @@ export default function Projects() {
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
-          <Reveal key={project.slug} delay={(i % 6) * 0.06}>
-            <ProjectCard project={project} />
-          </Reveal>
-        ))}
-      </div>
+      <Reveal delay={0.1}>
+        <ProjectFilters projects={projects} />
+      </Reveal>
 
       <Reveal delay={0.1}>
         <div className="mt-11 text-center">

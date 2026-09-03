@@ -2,6 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import TypedRole from "@/components/TypedRole";
 import PhotoFrame from "@/components/PhotoFrame";
+import TechOrbit from "@/components/TechOrbit";
 
 export default function Hero() {
   return (
@@ -33,7 +34,7 @@ export default function Hero() {
           <div className="mb-[30px] flex flex-wrap justify-center gap-4 md:justify-start">
             <Link
               href="/projects"
-              className="rounded-full bg-gradient-to-br from-cherry to-navy px-[26px] py-3.5 font-bold text-white shadow-[0_8px_24px_-10px_rgb(227_28_79_/_55%)] transition-transform hover:-translate-y-0.5"
+              className="rounded-full bg-gradient-to-br from-cherry to-navy px-[26px] py-3.5 font-bold text-white shadow-[0_8px_24px_-10px_rgb(232_93_158_/_55%)] transition-transform hover:-translate-y-0.5"
             >
               View my work
             </Link>
@@ -92,7 +93,9 @@ export default function Hero() {
       </div>
 
       <Reveal delay={0.1} className="order-1 mb-5 md:order-2 md:mb-0">
-        <PhotoFrame />
+        <TechOrbit>
+          <PhotoFrame />
+        </TechOrbit>
       </Reveal>
     </section>
   );

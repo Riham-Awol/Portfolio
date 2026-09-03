@@ -1,4 +1,9 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import DeveloperDNA from "@/components/DeveloperDNA";
+import { getProjectsByTech } from "@/lib/projects";
+
+const EVIDENCE_SKILLS = ["JavaScript", "TypeScript", "React", "Node.js"];
 
 const SKILL_GROUPS = [
   {
@@ -52,7 +57,7 @@ export default function Skills() {
       <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {SKILL_GROUPS.map((group, i) => (
           <Reveal key={group.title} delay={i * 0.05}>
-            <div className="h-full rounded-[20px] border border-border bg-surface p-7 transition-all hover:-translate-y-2 hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(227_28_79_/_30%)]">
+            <div className="h-full rounded-[20px] border border-border bg-surface p-7 transition-all hover:-translate-y-2 hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(232_93_158_/_30%)]">
               <div className="mb-3 text-[1.8rem]">{group.icon}</div>
               <h3 className="mb-1.5 text-[1.05rem] text-text">{group.title}</h3>
               <p className="mb-3.5 text-[0.85rem] leading-relaxed text-text-soft">{group.blurb}</p>
@@ -104,6 +109,57 @@ export default function Skills() {
           </div>
         </div>
       </Reveal>
+
+      <Reveal delay={0.1}>
+        <h2 className="font-display mt-16 mb-2 text-2xl text-text">Developer DNA</h2>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <p className="mb-8 max-w-[560px] text-[0.94rem] text-text-soft">A self-rated snapshot of where I lean strongest.</p>
+      </Reveal>
+      <Reveal delay={0.15}>
+        <div className="rounded-[20px] border border-border bg-surface p-8">
+          <DeveloperDNA />
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <h2 className="font-display mt-16 mb-2 text-2xl text-text">Skills in action</h2>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <p className="mb-8 max-w-[560px] text-[0.94rem] text-text-soft">
+          Not a star rating — the actual projects each skill shows up in.
+        </p>
+      </Reveal>
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {EVIDENCE_SKILLS.map((skill, i) => {
+          const matches = getProjectsByTech(skill);
+          if (matches.length === 0) return null;
+          return (
+            <Reveal key={skill} delay={i * 0.05}>
+              <div className="h-full rounded-[20px] border border-border bg-surface p-6">
+                <div className="mb-3 flex items-center justify-between">
+                  <h3 className="font-display text-lg text-text">{skill}</h3>
+                  <span className="rounded-full bg-cherry/14 px-2.5 py-1 text-[0.72rem] font-bold text-cherry-light">
+                    {matches.length} project{matches.length > 1 ? "s" : ""}
+                  </span>
+                </div>
+                <ul className="grid gap-1.5">
+                  {matches.map((p) => (
+                    <li key={p.slug}>
+                      <Link
+                        href={`/projects/${p.slug}`}
+                        className="inline-flex items-center gap-1.5 text-[0.9rem] text-text-soft transition-colors hover:text-cherry-light"
+                      >
+                        → {p.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
     </section>
   );
 }

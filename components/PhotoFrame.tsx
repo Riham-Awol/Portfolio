@@ -9,7 +9,7 @@ export default function PhotoFrame() {
   return (
     <div className="animate-floaty relative mx-auto w-fit">
       <div
-        className="animate-morph relative aspect-square w-[min(340px,78vw)] overflow-hidden border-[6px] border-surface shadow-[0_20px_60px_-15px_rgb(227_28_79_/_30%)]"
+        className="animate-morph relative aspect-square w-[min(340px,78vw)] overflow-hidden border-[6px] border-surface shadow-[0_20px_60px_-15px_rgb(232_93_158_/_30%)]"
         style={{
           borderRadius: "42% 58% 55% 45% / 48% 42% 58% 52%",
           background: "linear-gradient(150deg, var(--navy), var(--cherry-dark))",

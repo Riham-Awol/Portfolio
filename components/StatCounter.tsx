@@ -17,7 +17,7 @@ export default function StatCounter({ target, label }: { target: number; label: 
   }, [inView, count, target]);
 
   return (
-    <div className="flex items-baseline gap-3 rounded-xl border border-border bg-surface px-6 py-[22px] transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(227_28_79_/_30%)]">
+    <div className="flex items-baseline gap-3 rounded-xl border border-border bg-surface px-6 py-[22px] transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(232_93_158_/_30%)]">
       <motion.span ref={ref} className="font-display text-3xl font-bold text-cherry-light">
         {rounded}
       </motion.span>

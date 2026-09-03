@@ -107,7 +107,7 @@ export default function About() {
       <div className="grid gap-5">
         {EXPERIENCE.map((job, i) => (
           <Reveal key={job.role + job.org} delay={i * 0.06}>
-            <div className="relative rounded-[20px] border border-border bg-surface py-6 pr-7 pl-8 transition-all hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(227_28_79_/_20%)]">
+            <div className="relative rounded-[20px] border border-border bg-surface py-6 pr-7 pl-8 transition-all hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(232_93_158_/_20%)]">
               <span
                 className="absolute top-6 bottom-6 left-0 w-1 rounded-full"
                 style={{ background: "linear-gradient(180deg, var(--cherry), var(--navy))" }}
@@ -153,7 +153,7 @@ export default function About() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {VALUES.map((value, i) => (
           <Reveal key={value.title} delay={i * 0.05}>
-            <div className="h-full rounded-[20px] border border-border bg-surface p-7 transition-all hover:-translate-y-1.5 hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(227_28_79_/_25%)]">
+            <div className="h-full rounded-[20px] border border-border bg-surface p-7 transition-all hover:-translate-y-1.5 hover:border-cherry/40 hover:shadow-[0_20px_45px_-15px_rgb(232_93_158_/_25%)]">
               <div className="mb-3 text-[1.7rem]">{value.icon}</div>
               <h3 className="mb-2 text-[1.05rem] text-text">{value.title}</h3>
               <p className="text-[0.94rem] leading-relaxed text-text-soft">{value.text}</p>

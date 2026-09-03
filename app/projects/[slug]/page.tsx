@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 import { projects, getProject, getAdjacentProjects } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -58,7 +59,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-gradient-to-br from-cherry to-navy px-[26px] py-3.5 font-bold text-white shadow-[0_8px_24px_-10px_rgb(227_28_79_/_55%)] transition-transform hover:-translate-y-0.5"
+            className="rounded-full bg-gradient-to-br from-cherry to-navy px-[26px] py-3.5 font-bold text-white shadow-[0_8px_24px_-10px_rgb(232_93_158_/_55%)] transition-transform hover:-translate-y-0.5"
           >
             View source on GitHub ↗
           </a>
@@ -73,7 +74,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       <Reveal delay={0.15}>
         <div
-          className="relative mb-14 aspect-video w-full overflow-hidden rounded-[20px] shadow-[0_20px_60px_-15px_rgb(227_28_79_/_25%)]"
+          className="relative mb-14 aspect-video w-full overflow-hidden rounded-[20px] shadow-[0_20px_60px_-15px_rgb(232_93_158_/_25%)]"
           style={{ background: "linear-gradient(135deg, var(--navy), var(--cherry-dark))" }}
         >
           <div className="absolute top-0 right-0 left-0 h-[34px] bg-black/20" />
@@ -103,8 +104,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </Reveal>
 
-        <Reveal delay={0.15}>
-          <aside className="self-start rounded-[20px] border border-border bg-surface p-[26px]">
+        <Reveal delay={0.15} className="grid gap-6">
+          <aside className="rounded-[20px] border border-border bg-surface p-[26px]">
             <h3 className="mb-3.5 text-[0.9rem] font-bold tracking-[0.08em] text-cherry-light uppercase">Built with</h3>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
@@ -114,6 +115,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               ))}
             </div>
           </aside>
+
+          <aside className="rounded-[20px] border border-border bg-surface p-[26px]">
+            <h3 className="mb-4 text-[0.9rem] font-bold tracking-[0.08em] text-cherry-light uppercase">Stack flow</h3>
+            <ArchitectureDiagram tech={project.tech} />
+          </aside>
         </Reveal>
       </div>
 
@@ -121,14 +127,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <nav className="mb-5 grid grid-cols-1 gap-5 border-t border-border pt-9 sm:grid-cols-2">
           <Link
             href={`/projects/${prev.slug}`}
-            className="rounded-xl border border-border bg-surface px-[22px] py-5 transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(227_28_79_/_25%)]"
+            className="rounded-xl border border-border bg-surface px-[22px] py-5 transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(232_93_158_/_25%)]"
           >
             <span className="mb-1.5 block text-[0.75rem] font-extrabold tracking-[0.08em] text-cherry-light uppercase">← Previous</span>
             <span className="font-display text-[1.05rem] text-text">{prev.name}</span>
           </Link>
           <Link
             href={`/projects/${next.slug}`}
-            className="rounded-xl border border-border bg-surface px-[22px] py-5 text-right transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(227_28_79_/_25%)] sm:text-right"
+            className="rounded-xl border border-border bg-surface px-[22px] py-5 text-right transition-all hover:-translate-y-1 hover:border-cherry/40 hover:shadow-[0_10px_30px_-12px_rgb(232_93_158_/_25%)] sm:text-right"
           >
             <span className="mb-1.5 block text-[0.75rem] font-extrabold tracking-[0.08em] text-cherry-light uppercase">Next →</span>
             <span className="font-display text-[1.05rem] text-text">{next.name}</span>

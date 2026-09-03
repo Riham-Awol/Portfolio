@@ -4,16 +4,18 @@ import { projects } from "@/lib/projects";
 
 export default function Projects() {
   return (
-    <section className="mx-auto max-w-[1160px] px-6 py-24">
+    <section className="mx-auto max-w-[1160px] px-6 pt-[130px] pb-24 md:pt-24">
       <Reveal>
         <p className="mb-2.5 text-[0.78rem] font-extrabold tracking-[0.14em] text-cherry-light uppercase">My work</p>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="font-display mb-4 text-[clamp(1.9rem,4vw,2.7rem)] font-bold text-text">Featured Projects</h2>
+        <h1 className="font-display mb-4 text-[clamp(1.9rem,4vw,2.7rem)] font-bold text-text">Featured Projects</h1>
       </Reveal>
       <Reveal delay={0.1}>
-        <p className="mb-10 max-w-[620px] text-[1.05rem] text-text-soft">
-          A selection of applications I&apos;ve designed and built, pulled straight from my GitHub. Open any project for the full write-up.
+        <p className="mb-10 max-w-[640px] text-[1.05rem] text-text-soft">
+          Ten applications spanning e-commerce, fintech, HR tooling, and business
+          dashboards — each one solving a real, specific problem. Pulled
+          straight from my GitHub, with a full write-up on every project page.
         </p>
       </Reveal>
 

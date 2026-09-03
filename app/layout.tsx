@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlobBackground from "@/components/BlobBackground";
+import FloatingChat from "@/components/FloatingChat";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingChat />
       </body>
     </html>
   );

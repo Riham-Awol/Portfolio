@@ -51,6 +51,20 @@ export default function ContactPageContent() {
               </li>
               <li>
                 <a
+                  href="tel:+251970646644"
+                  className="flex items-center gap-3 rounded-xl border border-border bg-surface-2 px-4 py-3 text-[0.9rem] font-semibold text-text transition-colors hover:border-cherry/40 hover:text-cherry-light"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" className="shrink-0">
+                    <path
+                      fill="currentColor"
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.9c0-.6.4-1 1-1h4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1L6.6 10.8Z"
+                    />
+                  </svg>
+                  +251 970 646 644
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/Riham-Awol"
                   target="_blank"
                   rel="noopener noreferrer"

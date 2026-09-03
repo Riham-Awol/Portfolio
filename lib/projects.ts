@@ -1,5 +1,16 @@
-/* Shared project data — used by the homepage grid and every project detail page. */
-window.PROJECTS = [
+export type Project = {
+  slug: string;
+  name: string;
+  icon: string;
+  tagline: string;
+  tags: string[];
+  description: string;
+  features: string[];
+  tech: string[];
+  github: string;
+};
+
+export const projects: Project[] = [
   {
     slug: "e-commerce",
     name: "E-Commerce Platform",
@@ -170,3 +181,14 @@ window.PROJECTS = [
     github: "https://github.com/Riham-Awol/Game-Hub",
   },
 ];
+
+export function getProject(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug);
+}
+
+export function getAdjacentProjects(slug: string): { prev: Project; next: Project } {
+  const index = projects.findIndex((p) => p.slug === slug);
+  const prev = projects[(index - 1 + projects.length) % projects.length];
+  const next = projects[(index + 1) % projects.length];
+  return { prev, next };
+}

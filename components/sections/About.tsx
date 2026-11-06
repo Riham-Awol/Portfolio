@@ -25,7 +25,7 @@ const VALUES = [
   },
 ];
 
-const EXPERIENCE = [
+const EXPERIENCE: { role: string; org: string; period?: string; points: string[] }[] = [
   {
     role: "Freelance Full-Stack Developer",
     org: "5C Mentorship Platform & Meweda Matrimonial Site",
@@ -33,6 +33,16 @@ const EXPERIENCE = [
     points: [
       "Architecting and developing responsive web applications for mentorship tracking and matrimonial matchmaking.",
       "Implementing robust REST APIs, secure authentication, dynamic profile management, and real-time messaging.",
+    ],
+  },
+  {
+    role: "Software QA Engineer",
+    org: "EthSwitch S.C. — Ethiopia's National Payment Switch",
+    points: [
+      "Designed and executed manual test cases — functional, regression, and UAT — for payment and transaction systems.",
+      "Tested payment and transaction APIs with Postman, validating request/response flows, error handling, and edge cases.",
+      "Wrote automated test scripts to speed up regression cycles and catch defects earlier in the release process.",
+      "Logged, tracked, and verified defects with developers through to resolution, keeping releases stable and reliable.",
     ],
   },
   {
@@ -82,7 +92,8 @@ export default function About() {
               Science student, committed to creating scalable platforms and
               seamless user experiences — experienced across the full
               development lifecycle from database design to high-performance
-              responsive UI.
+              responsive UI, with hands-on QA experience testing payment
+              systems at EthSwitch.
             </p>
             <p>
               My recent work spans B2B e-commerce platforms, payment
@@ -114,7 +125,7 @@ export default function About() {
               />
               <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="font-display text-lg text-text">{job.role}</h3>
-                <span className="text-[0.8rem] font-bold text-cherry-light">{job.period}</span>
+                {job.period && <span className="text-[0.8rem] font-bold text-cherry-light">{job.period}</span>}
               </div>
               <p className="mb-3 text-[0.9rem] font-semibold text-text-soft">{job.org}</p>
               <ul className="grid gap-1.5">

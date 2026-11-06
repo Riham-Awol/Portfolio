@@ -50,6 +50,8 @@ export default function ResumePage() {
             output={[
               "{",
               '  "role": "Full-Stack Web & Mobile Developer",',
+              '  "experience": ["Software QA Engineer @ EthSwitch", "Software Engineering Intern @ WeTech PLC", "Web Developer Intern @ Tofi Tech"],',
+              '  "qa": ["Manual testing", "API testing", "Test automation", "Bug tracking"],',
               '  "skills": ["React.js", "Node.js", "JavaScript", "Flutter/Dart", "MongoDB", "Firebase"],',
               '  "location": "Addis Ababa, Ethiopia",',
               '  "status": "open_to_opportunities"',

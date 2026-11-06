@@ -8,6 +8,7 @@ const RECRUITER = {
       title: "Experience",
       items: [
         "Freelance Full-Stack Developer — 5C Mentorship Platform & Meweda Matrimonial Site (Present)",
+        "Software QA Engineer — EthSwitch S.C. (manual, API & automated testing of payment systems)",
         "Software Engineering Intern — WeTech PLC, Das Homes Call Center Project (2026)",
         "Web Developer Intern — Tofi Tech Solutions (June 2024 – November 2024)",
       ],
@@ -40,6 +41,10 @@ const TECHNICAL = {
     {
       title: "APIs & Architecture",
       items: ["REST API design & integration", "Full-stack web architectures", "Mobile app frameworks"],
+    },
+    {
+      title: "QA & Testing",
+      items: ["Manual testing (functional, regression, UAT)", "API testing with Postman", "Test automation", "Bug tracking & defect management"],
     },
     {
       title: "Tools & Deployment",
